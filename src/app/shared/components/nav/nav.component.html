@@ -1,0 +1,105 @@
+<nav class="center">
+  <ul>
+    <li>
+      <a data-link [routerLink]="['/home']" routerLinkActive="active_link">
+        hOme
+      </a>
+    </li>
+    <li>
+      <a data-link [routerLink]="['/about']" routerLinkActive="active_link">
+        aBout
+      </a>
+    </li>
+    <li>
+      <a
+        data-link
+        [routerLink]="['/projects-skills']"
+        routerLinkActive="active_link"
+      >
+        pRojects / sKills
+      </a>
+    </li>
+    <li>
+      <a data-link [routerLink]="['/education']" routerLinkActive="active_link">
+        eDucation
+      </a>
+    </li>
+    <li>
+      <a
+        data-link
+        [routerLink]="['/experience']"
+        routerLinkActive="active_link"
+      >
+        eXperience
+      </a>
+    </li>
+    <li>
+      <a data-link [routerLink]="['/contact']" routerLinkActive="active_link">
+        cOntact
+      </a>
+    </li>
+  </ul>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <a
+      mat-menu-item
+      [routerLink]="['/home']"
+      routerLinkActive
+      #homeRef="routerLinkActive"
+      [disabled]="homeRef.isActive"
+    >
+      HOME
+    </a>
+    <a
+      mat-menu-item
+      [routerLink]="['/about']"
+      routerLinkActive
+      #aboutRef="routerLinkActive"
+      [disabled]="aboutRef.isActive"
+    >
+      ABOUT
+    </a>
+    <a
+      mat-menu-item
+      [routerLink]="['/projects-skills']"
+      routerLinkActive
+      #projectsSkillsRef="routerLinkActive"
+      [disabled]="projectsSkillsRef.isActive"
+    >
+      PROJECTS / SKILLS
+    </a>
+    <a
+      mat-menu-item
+      [routerLink]="['/education']"
+      routerLinkActive
+      #educationRef="routerLinkActive"
+      [disabled]="educationRef.isActive"
+    >
+      EDUCATION
+    </a>
+    <a
+      mat-menu-item
+      [routerLink]="['/experience']"
+      routerLinkActive
+      #experienceRef="routerLinkActive"
+      [disabled]="experienceRef.isActive"
+    >
+      EXPERIENCE
+    </a>
+    <a
+      mat-menu-item
+      [routerLink]="['/contact']"
+      routerLinkActive
+      #contactRef="routerLinkActive"
+      [disabled]="contactRef.isActive"
+    >
+      CONTACT
+    </a>
+  </mat-menu>
+</nav>
