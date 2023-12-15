@@ -1,0 +1,64 @@
+@use "../../../../globals.scss" as globals;
+
+nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: globals.pxToRem(30);
+  ul {
+    height: 100%;
+    li {
+      a {
+        text-transform: uppercase;
+        @include globals.fontSizing(16, 24);
+        position: relative;
+        padding: globals.pxToRem(10) globals.pxToRem(10);
+        user-select: none;
+        box-sizing: border-box;
+        border: globals.pxToRem(1) solid rgba(255, 255, 255, 0);
+
+        &.active_link {
+          border: globals.pxToRem(1) solid white;
+          cursor: default;
+          box-shadow: none;
+        }
+
+        &[data-link]:not(.active_link) {
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: globals.pxToRem(0);
+            background: rgba(255, 255, 255, 0.856);
+            width: 0;
+            height: globals.pxToRem(2);
+
+            transition: width 0.45s ease-in-out;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+
+      & + li {
+        margin-left: globals.pxToRem(20);
+      }
+    }
+  }
+
+  button {
+    display: none;
+  }
+
+  @media screen and (max-width: 820px) {
+    ul {
+      display: none;
+    }
+    button {
+      display: inline-block;
+      object-fit: fill;
+    }
+  }
+}
