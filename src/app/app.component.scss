@@ -1,0 +1,11 @@
+@use "../globals.scss" as globals;
+
+:host {
+  min-height: 100%;
+  margin-bottom: globals.pxToRem(50);
+  header {
+    & + main {
+      margin-top: globals.pxToRem(100);
+    }
+  }
+}

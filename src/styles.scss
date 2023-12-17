@@ -15,12 +15,18 @@
 
 body {
   min-height: 100dvh;
-  height: fit-content;
   display: flex;
   flex-direction: column;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
   background: #0a3b41;
+  background: linear-gradient(
+      140deg,
+      rgba(133, 133, 1, 1) 2%,
+      rgba(10, 59, 65, 1) 35%
+    )
+    no-repeat;
   color: white;
+  margin: 0;
   padding-top: globals.pxToRem(30);
 }
 
@@ -69,13 +75,4 @@ footer {
 
 input {
   all: unset;
-}
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
