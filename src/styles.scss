@@ -19,12 +19,6 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background: #0a3b41;
-  background: linear-gradient(
-      140deg,
-      rgba(133, 133, 1, 1) 2%,
-      rgba(10, 59, 65, 1) 35%
-    )
-    no-repeat;
   color: white;
   margin: 0;
   padding-top: globals.pxToRem(30);
