@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 
 // Components
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { ProjectsSkillsPageComponent } from './components/projects-skills-page/projects-skills-page.component';
-import { EducationPageComponent } from './components/education-page/education-page.component';
-import { ExperiencePageComponent } from './components/experience-page/experience-page.component';
-import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { HomeComponent } from './components/Home/Home.component';
+import { AboutComponent } from './components/About/About.component';
+import { ProjectsSkillsComponent } from './components/Projects-Skills/Projects-Skills.component';
+import { EducationComponent } from './components/Education/Education.component';
+import { ExperienceComponent } from './components/Experience/Experience.component';
+import { ContactComponent } from './components/Contact/Contact.component';
 
 const components = [
-  HomePageComponent,
-  AboutPageComponent,
-  ProjectsSkillsPageComponent,
-  EducationPageComponent,
-  ExperiencePageComponent,
-  ContactPageComponent,
+  HomeComponent,
+  AboutComponent,
+  ProjectsSkillsComponent,
+  EducationComponent,
+  ExperienceComponent,
+  ContactComponent,
 ];
 
 @NgModule({
