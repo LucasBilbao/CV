@@ -2,7 +2,10 @@
 
 section.center {
   display: flex;
-  margin-top: globals.pxToRem(250);
+  margin-top: globals.pxToRem(70);
+  justify-content: space-between;
+  column-gap: globals.pxToRem(150);
+  row-gap: globals.pxToRem(75);
   div.profile_animator_wrapper {
     position: relative;
     min-width: globals.pxToRem(300);
@@ -57,7 +60,7 @@ section.center {
   p {
     text-indent: globals.pxToRem(50);
     @include globals.fontSizing(24, 30);
-    margin-left: globals.pxToRem(250);
+    // margin-left: globals.pxToRem(250);
 
     @media screen and (max-width: 450px) {
       text-indent: globals.pxToRem(25);
@@ -70,7 +73,6 @@ section.center {
     flex-direction: column;
 
     p {
-      margin-top: globals.pxToRem(100);
       margin-left: 0;
     }
   }
