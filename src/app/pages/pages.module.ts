@@ -8,6 +8,7 @@ import { ProjectsSkillsComponent } from './components/Projects-Skills/Projects-S
 import { EducationComponent } from './components/Education/Education.component';
 import { ExperienceComponent } from './components/Experience/Experience.component';
 import { ContactComponent } from './components/Contact/Contact.component';
+import { EducationItemComponent } from './components/Education/education-item/education-item.component';
 
 const components = [
   HomeComponent,
@@ -16,6 +17,7 @@ const components = [
   EducationComponent,
   ExperienceComponent,
   ContactComponent,
+  EducationItemComponent,
 ];
 
 @NgModule({

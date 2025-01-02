@@ -6,56 +6,6 @@ section.center {
   justify-content: space-between;
   column-gap: globals.pxToRem(150);
   row-gap: globals.pxToRem(75);
-  div.profile_animator_wrapper {
-    position: relative;
-    min-width: globals.pxToRem(300);
-    min-height: globals.pxToRem(300);
-
-    div.profile_img_wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      aspect-ratio: 1/1;
-
-      img {
-        width: globals.pxToRem(300);
-        aspect-ratio: 1/1;
-        border-radius: 50%;
-        position: relative;
-        object-fit: cover;
-        display: inline-block;
-      }
-
-      div.img_bkg {
-        background: white;
-        position: absolute;
-        width: globals.pxToRem(350);
-        aspect-ratio: 1/1;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 23% 77% 45% 55% / 29% 51% 49% 71%;
-        animation: rotating 7s infinite forwards linear,
-          waving 5s infinite forwards linear;
-      }
-    }
-
-    @media screen and (max-width: 580px) {
-      div.profile_img_wrapper {
-        width: globals.pxToRem(250);
-
-        div.img_bkg {
-          width: globals.pxToRem(280);
-        }
-
-        img {
-          width: globals.pxToRem(250);
-        }
-      }
-    }
-  }
 
   p {
     text-indent: globals.pxToRem(50);
@@ -75,23 +25,5 @@ section.center {
     p {
       margin-left: 0;
     }
-  }
-}
-
-@keyframes waving {
-  0% {
-    border-radius: 73% 27% 32% 68% / 25% 42% 58% 75%;
-  }
-  25% {
-    border-radius: 73% 27% 64% 36% / 46% 61% 39% 54%;
-  }
-  50% {
-    border-radius: 24% 76% 45% 55% / 67% 26% 74% 33%;
-  }
-  75% {
-    border-radius: 73% 27% 64% 36% / 46% 61% 39% 54%;
-  }
-  100% {
-    border-radius: 73% 27% 32% 68% / 25% 42% 58% 75%;
   }
 }

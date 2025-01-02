@@ -1,0 +1,30 @@
+<li>
+  <article>
+    <header>
+      <h3>
+        @if(educationItem?.level; as level){
+        <b>{{ level }}</b> of }
+        {{ educationItem?.specialty }}
+      </h3>
+      <div class="education_info">
+        <h4>{{ educationItem?.school }}</h4>
+        <p>
+          [
+          {{ educationItem?.start | date : "MMMM, yyyy" }}
+          - @if (educationItem?.isOngoing) { Ongoing } @else {
+          {{ educationItem?.end | date : "MMMM, yyyy" }}
+          } ]
+        </p>
+      </div>
+    </header>
+    <main>
+      <p>
+        Country: <b>{{ educationItem?.country }}</b>
+      </p>
+      <mat-icon>horizontal_rule</mat-icon>
+      <a [href]="educationItem?.url" target="_blank">
+        <mat-icon>link</mat-icon>
+      </a>
+    </main>
+  </article>
+</li>

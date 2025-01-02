@@ -1,1 +1,21 @@
-<p>education-page works!</p>
+<section class="center">
+  <div class="profile_animator_wrapper">
+    <div class="profile_img_wrapper">
+      <div class="img_bkg"></div>
+      <img
+        src="../../../../assets/Luka_Bilbao-Munios.jpg"
+        alt="Luka Bilbao-Munios head-shot"
+      />
+    </div>
+  </div>
+  @if (educations$ | async; as educations) {
+  <ul>
+    @for (education of educations; track $index) {
+    <cv-education-item [educationItem]="education" />
+    }
+  </ul>
+
+  } @else {
+  <h1>loading</h1>
+  }
+</section>
