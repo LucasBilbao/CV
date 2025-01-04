@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/components/home-page/home-page.component';
-import { AboutPageComponent } from './pages/components/about-page/about-page.component';
-import { ProjectsSkillsPageComponent } from './pages/components/projects-skills-page/projects-skills-page.component';
-import { EducationPageComponent } from './pages/components/education-page/education-page.component';
-import { ExperiencePageComponent } from './pages/components/experience-page/experience-page.component';
-import { ContactPageComponent } from './pages/components/contact-page/contact-page.component';
+
+// Pages
+import { HomeComponent } from './pages/components/Home/Home.component';
+import { AboutComponent } from './pages/components/About/About.component';
+import { ProjectsSkillsComponent } from './pages/components/Projects-Skills/Projects-Skills.component';
+import { EducationComponent } from './pages/components/Education/Education.component';
+import { ExperienceComponent } from './pages/components/Experience/Experience.component';
+import { ContactComponent } from './pages/components/Contact/Contact.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'about', component: AboutPageComponent },
-  { path: 'projects-skills', component: ProjectsSkillsPageComponent },
-  { path: 'education', component: EducationPageComponent },
-  { path: 'experience', component: ExperiencePageComponent },
-  { path: 'contact', component: ContactPageComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'projects-skills', component: ProjectsSkillsComponent },
+  { path: 'education', component: EducationComponent },
+  { path: 'experience', component: ExperienceComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
 ];
 

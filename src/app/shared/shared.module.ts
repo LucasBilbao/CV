@@ -14,9 +14,11 @@ const components = [NavComponent];
 
 const materials = [MatIconModule, MatMenuModule, MatButtonModule];
 
+const modules = [CommonModule, RouterModule];
+
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, materials, RouterModule],
-  exports: [components, CommonModule],
+  imports: [modules, materials],
+  exports: [components, modules, materials],
 })
 export class SharedModule {}
