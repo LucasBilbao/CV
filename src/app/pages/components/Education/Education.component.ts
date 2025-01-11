@@ -9,10 +9,12 @@ import { Education } from '../../../interfaces/education.interface';
   styleUrl: './Education.component.scss',
 })
 export class EducationComponent implements OnInit {
-  public educations$?: Observable<Education[]>;
+  public educations$: Observable<Education[]>;
+  public isLoading$: Observable<boolean>;
 
   constructor(private educationService: EducationService) {
     this.educations$ = this.educationService.educationsObservable;
+    this.isLoading$ = this.educationService.isLoadingObservable;
   }
 
   ngOnInit(): void {
