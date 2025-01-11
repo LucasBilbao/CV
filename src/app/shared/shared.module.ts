@@ -6,13 +6,20 @@ import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Components
 import { NavComponent } from './components/nav/nav.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
-const components = [NavComponent];
+const components = [NavComponent, LoaderComponent];
 
-const materials = [MatIconModule, MatMenuModule, MatButtonModule];
+const materials = [
+  MatIconModule,
+  MatMenuModule,
+  MatButtonModule,
+  MatProgressSpinnerModule,
+];
 
 const modules = [CommonModule, RouterModule];
 

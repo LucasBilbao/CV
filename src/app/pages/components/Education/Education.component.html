@@ -8,14 +8,13 @@
       />
     </div>
   </div>
-  @if (educations$ | async; as educations) {
+  @if (!(isLoading$ | async)) {
   <ul>
-    @for (education of educations; track $index) {
+    @for (education of (educations$ | async); track $index) {
     <cv-education-item [educationItem]="education" />
     }
   </ul>
-
   } @else {
-  <h1>loading</h1>
+  <cv-loader></cv-loader>
   }
 </section>
