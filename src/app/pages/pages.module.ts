@@ -9,6 +9,9 @@ import { EducationComponent } from './components/Education/Education.component';
 import { ExperienceComponent } from './components/Experience/Experience.component';
 import { ContactComponent } from './components/Contact/Contact.component';
 import { EducationItemComponent } from './components/Education/education-item/education-item.component';
+import { ProjectsComponent } from './components/Projects-Skills/projects/projects.component';
+import { SkillsComponent } from './components/Projects-Skills/skills/skills.component';
+import { SkillItemComponent } from './components/Projects-Skills/skills/skill-item/skill-item.component';
 
 const components = [
   HomeComponent,
@@ -18,6 +21,9 @@ const components = [
   ExperienceComponent,
   ContactComponent,
   EducationItemComponent,
+  ProjectsComponent,
+  SkillsComponent,
+  SkillItemComponent,
 ];
 
 @NgModule({

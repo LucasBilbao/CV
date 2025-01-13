@@ -10,7 +10,6 @@ section.center {
   p {
     text-indent: globals.pxToRem(50);
     @include globals.fontSizing(24, 30);
-    // margin-left: globals.pxToRem(250);
 
     @media screen and (max-width: 450px) {
       text-indent: globals.pxToRem(25);

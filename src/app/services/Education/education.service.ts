@@ -3,6 +3,7 @@ import { Education } from '../../interfaces/education.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { PATHS } from '../../utils/paths.enum';
+import { UrlBuilder } from '../../utils/urlBuilder';
 
 @Injectable({
   providedIn: 'root',
@@ -17,12 +18,11 @@ export class EducationService {
 
   public fetchEducations() {
     this.isLoadingObservable = true;
-    this.http
-      .get<Education[]>(PATHS.EDUCATIONS)
-      .subscribe((data: Education[]) => {
-        this.educationsObservable = data;
-        this.isLoadingObservable = false;
-      });
+    const url = new UrlBuilder().setPath(PATHS.EDUCATIONS).get();
+    this.http.get<Education[]>(url).subscribe((data: Education[]) => {
+      this.educationsObservable = data;
+      this.isLoadingObservable = false;
+    });
   }
 
   public set educationsObservable(value: Education[]) {

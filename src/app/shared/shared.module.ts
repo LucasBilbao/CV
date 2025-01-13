@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // Components
 import { NavComponent } from './components/nav/nav.component';
@@ -19,6 +21,8 @@ const materials = [
   MatMenuModule,
   MatButtonModule,
   MatProgressSpinnerModule,
+  MatDividerModule,
+  MatTooltipModule,
 ];
 
 const modules = [CommonModule, RouterModule];

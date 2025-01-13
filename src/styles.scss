@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background: #0a3b41;
+  background: globals.$MAIN_COLOR;
   color: white;
   margin: 0;
   padding-top: globals.pxToRem(30);
@@ -56,6 +56,8 @@ footer {
   width: 70%;
   max-width: 1320px;
   margin: auto;
+  padding: 0 globals.pxToRem(30);
+
   @media screen and (max-width: 1500px) {
     width: 80%;
   }
