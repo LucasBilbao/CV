@@ -1,4 +1,5 @@
 $PX_SIZE: 16;
+$MAIN_COLOR: #0a3b41;
 
 @function calcFontSizeInRem($font_size_px) {
   @return calc($font_size_px / $PX_SIZE);
