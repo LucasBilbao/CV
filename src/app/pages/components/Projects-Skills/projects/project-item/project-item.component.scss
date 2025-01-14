@@ -1,0 +1,25 @@
+@use "../../../../../../globals.scss" as globals;
+
+article {
+  h4 {
+    @include globals.fontSizing(24, 26);
+  }
+  p {
+    @include globals.fontSizing(15, 20);
+  }
+
+  ul {
+    display: flex;
+    column-gap: globals.pxToRem(15);
+    row-gap: globals.pxToRem(10);
+    flex-wrap: wrap;
+    margin-top: globals.pxToRem(15);
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: globals.pxToRem(15);
+    margin-top: globals.pxToRem(15);
+  }
+}

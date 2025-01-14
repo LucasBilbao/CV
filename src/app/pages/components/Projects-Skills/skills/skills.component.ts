@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LEVELS } from '../../../../utils/constants';
+import { Skill } from '../../../../interfaces/skill.interface';
 import { SkillService } from '../../../../services/Skill/skill.service';
-import { Observable } from 'rxjs';
-import { Skill } from '../../../../interfaces/Skill.interface';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'cv-skills',
@@ -15,7 +15,12 @@ export class SkillsComponent implements OnInit {
   public readonly LEVELS = LEVELS;
 
   constructor(private skillService: SkillService) {
-    this.skills$ = this.skillService.skillsObservable;
+    this.skills$ = this.skillService.skillsObservable.pipe(
+      map((data) => {
+        data.reverse();
+        return data;
+      })
+    );
     this.isLoading$ = this.skillService.isLoadingObservable;
   }
 

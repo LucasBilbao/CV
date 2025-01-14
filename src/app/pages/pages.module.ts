@@ -12,6 +12,7 @@ import { EducationItemComponent } from './components/Education/education-item/ed
 import { ProjectsComponent } from './components/Projects-Skills/projects/projects.component';
 import { SkillsComponent } from './components/Projects-Skills/skills/skills.component';
 import { SkillItemComponent } from './components/Projects-Skills/skills/skill-item/skill-item.component';
+import { ProjectItemComponent } from './components/Projects-Skills/projects/project-item/project-item.component';
 
 const components = [
   HomeComponent,
@@ -24,6 +25,7 @@ const components = [
   ProjectsComponent,
   SkillsComponent,
   SkillItemComponent,
+  ProjectItemComponent,
 ];
 
 @NgModule({
