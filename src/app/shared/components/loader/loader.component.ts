@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cv-loader',
-  templateUrl: './loader.component.html',
-  styleUrl: './loader.component.scss'
+    selector: 'cv-loader',
+    templateUrl: './loader.component.html',
+    styleUrl: './loader.component.scss',
+    standalone: false
 })
 export class LoaderComponent {
 

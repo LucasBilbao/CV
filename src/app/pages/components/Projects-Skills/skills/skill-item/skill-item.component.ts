@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'cv-skill-item',
-  templateUrl: './skill-item.component.html',
-  styleUrl: './skill-item.component.scss',
+    selector: 'cv-skill-item',
+    templateUrl: './skill-item.component.html',
+    styleUrl: './skill-item.component.scss',
+    standalone: false
 })
 export class SkillItemComponent {
   @Input() public skill?: string;

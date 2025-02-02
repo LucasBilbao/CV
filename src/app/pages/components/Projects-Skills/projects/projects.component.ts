@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 import { ProjectService } from '../../../../services/Project/project.service';
 
 @Component({
-  selector: 'cv-projects',
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss',
+    selector: 'cv-projects',
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss',
+    standalone: false
 })
 export class ProjectsComponent implements OnInit {
   public projects$?: Observable<Project[]>;

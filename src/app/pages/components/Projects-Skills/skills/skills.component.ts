@@ -5,9 +5,10 @@ import { SkillService } from '../../../../services/Skill/skill.service';
 import { map, Observable } from 'rxjs';
 
 @Component({
-  selector: 'cv-skills',
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+    selector: 'cv-skills',
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss',
+    standalone: false
 })
 export class SkillsComponent implements OnInit {
   public skills$?: Observable<Skill[]>;

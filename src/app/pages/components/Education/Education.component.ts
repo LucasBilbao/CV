@@ -4,9 +4,10 @@ import { Observable } from 'rxjs';
 import { Education } from '../../../interfaces/education.interface';
 
 @Component({
-  selector: 'cv-education',
-  templateUrl: './Education.component.html',
-  styleUrl: './Education.component.scss',
+    selector: 'cv-education',
+    templateUrl: './Education.component.html',
+    styleUrl: './Education.component.scss',
+    standalone: false
 })
 export class EducationComponent implements OnInit {
   public educations$: Observable<Education[]>;
