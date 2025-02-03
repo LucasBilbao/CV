@@ -8,9 +8,9 @@
       />
     </div>
   </div>
-  @if (!(isLoading$ | async)) {
+  @if (!(isLoading$() | async)) {
   <ul>
-    @for (education of (educations$ | async); track $index) {
+    @for (education of (educations$() | async); track $index) {
     <cv-education-item [educationItem]="education" />
     }
   </ul>

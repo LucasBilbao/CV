@@ -1,8 +1,8 @@
 <h3>Skills</h3>
 <div>
-  @if(!(isLoading$ | async)){
+  @if(!(isLoading$() | async)){
   <ul>
-    @for (skill of (skills$ | async); track $index) {
+    @for (skill of (skills$() | async); track $index) {
     <li [matTooltip]="LEVELS[skill.level]" matTooltipPosition="above">
       <cv-skill-item [level]="skill.level" [skill]="skill.skill" />
     </li>
