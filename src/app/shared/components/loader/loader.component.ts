@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
-    selector: 'cv-loader',
-    templateUrl: './loader.component.html',
-    styleUrl: './loader.component.scss',
-    standalone: false
+  selector: 'cv-loader',
+  template: `
+    <div>
+      <mat-spinner class="spinner"></mat-spinner>
+    </div>
+  `,
+  styleUrl: './loader.component.scss',
+  imports: [MatProgressSpinnerModule],
 })
-export class LoaderComponent {
-
-}
+export class LoaderComponent {}

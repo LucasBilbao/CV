@@ -1,8 +1,8 @@
 <h3>Projects</h3>
 <section>
-  @if (!(isLoading$ | async)) {
+  @if (!(isLoading$() | async)) {
   <ul>
-    @for (project of (projects$ | async); track $index) {
+    @for (project of (projects$() | async); track $index) {
     <li>
       <cv-project-item [project]="project" />
     </li>
