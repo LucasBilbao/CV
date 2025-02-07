@@ -13,8 +13,13 @@ h3 + section {
 
 section {
   ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: globals.pxToRem(35);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: globals.pxToRem(100);
+    row-gap: globals.pxToRem(50);
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
