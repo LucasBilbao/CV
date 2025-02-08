@@ -147,3 +147,18 @@ div.profile_animator_wrapper {
     border-radius: 73% 27% 32% 68% / 25% 42% 58% 75%;
   }
 }
+
+.mdc-snackbar__surface {
+  padding: 0 !important;
+  simple-snack-bar {
+    * {
+      &:first-child {
+        text-align: center;
+      }
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}
