@@ -105,8 +105,12 @@ section.center {
 
   @media screen and (max-width: 1370px) {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: globals.pxToRem(200);
+
+    div.profile_animator_wrapper {
+      align-self: center;
+    }
 
     div.info {
       margin-left: 0;
