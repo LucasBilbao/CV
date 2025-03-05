@@ -10,10 +10,10 @@
         <h4>{{ educationItem().school }}</h4>
         <p>
           [
-          {{ educationItem().start | date : "MMMM, yyyy" }}
-          - @if (educationItem().isOngoing) { Ongoing } @else {
-          {{ educationItem().end | date : "MMMM, yyyy" }}
-          } ]
+          {{ educationItem().start | dating }}
+          -
+          {{ educationItem().end | dating }}
+          ]
         </p>
       </div>
     </header>

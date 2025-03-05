@@ -1,0 +1,61 @@
+@use "../../../../../globals.scss" as globals;
+
+article {
+  header {
+    h3 {
+      color: #97e5ef;
+      @include globals.fontSizing(24, 26);
+    }
+
+    div {
+      display: flex;
+      column-gap: globals.pxToRem(15);
+
+      h4 {
+        @include globals.fontSizing(20, 22);
+        color: rgb(210, 209, 209);
+        font-style: italic;
+        font-weight: bold;
+      }
+      p {
+        @include globals.fontSizing(16, 20);
+        font-weight: lighter;
+        span {
+          color: rgb(219, 219, 219);
+        }
+      }
+    }
+  }
+  main {
+    section {
+      &.location {
+        display: flex;
+        align-items: center;
+        column-gap: globals.pxToRem(15);
+        height: globals.pxToRem(20);
+
+        span {
+          width: globals.pxToRem(1);
+          height: 100%;
+          display: inline-block;
+          background: white;
+        }
+
+        p {
+          @include globals.fontSizing(16, 20);
+          margin: 0;
+        }
+      }
+
+      &.description {
+        p {
+          white-space: pre-line;
+          @include globals.fontSizing(18, 25);
+        }
+      }
+      & + section {
+        margin-top: globals.pxToRem(25);
+      }
+    }
+  }
+}

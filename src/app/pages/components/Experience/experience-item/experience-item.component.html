@@ -1,0 +1,23 @@
+<article>
+  <header>
+    <h3>{{ experience().title }}</h3>
+    <div>
+      <h4>{{ experience().company }}</h4>
+      <p>
+        [ <span>{{ experience().start | dating }}</span> -
+        <span>{{ experience().end | dating }}</span>
+        ]
+      </p>
+    </div>
+  </header>
+  <main>
+    <section class="location">
+      <p><strong>City</strong>: {{ experience().city }}</p>
+      <span></span>
+      <p><strong>Country</strong>: {{ experience().country }}</p>
+    </section>
+    <section class="description">
+      <p>{{ experience().description }}</p>
+    </section>
+  </main>
+</article>
