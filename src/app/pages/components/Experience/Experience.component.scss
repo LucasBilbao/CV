@@ -1,0 +1,22 @@
+@use "../../../../globals.scss" as globals;
+
+section.center {
+  h2 {
+    text-transform: uppercase;
+    width: 100%;
+    @include globals.fontSizing(28, 30);
+    text-decoration: underline;
+    margin-bottom: globals.pxToRem(40);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: globals.pxToRem(35);
+    li {
+      & + li {
+        border-top: globals.pxToRem(1) solid white;
+        padding-top: globals.pxToRem(35);
+      }
+    }
+  }
+}

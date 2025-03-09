@@ -3,7 +3,10 @@
     <h4>{{ project().title }}</h4>
   </header>
   <main>
-    <p>{{ project().description }}</p>
+    <p>{{ project().description | truncate : 150 : isTruncated() }}</p>
+    <button (click)="toggleTruncate()">
+      [Show @if (isTruncated()) {more} @else {less}]
+    </button>
     <ul>
       @for (tag of project().tags; track $index) {
       <li>
@@ -21,7 +24,7 @@
       matTooltip="Source code"
       target="_blank"
     >
-      <mat-icon>code</mat-icon>
+      <mat-icon>language</mat-icon>
     </a>
     }
     <a
@@ -29,7 +32,7 @@
       matTooltip="Deployed website"
       target="_blank"
     >
-      <mat-icon>language</mat-icon>
+      <mat-icon>code</mat-icon>
     </a>
   </footer>
 </article>
