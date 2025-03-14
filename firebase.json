@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "dist/cv/browser",
+    "site": "luka-s-cv-6dde7",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
