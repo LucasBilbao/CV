@@ -1,0 +1,25 @@
+@use "../../../../../globals.scss" as globals;
+
+h3 {
+  text-transform: uppercase;
+  width: 100%;
+  @include globals.fontSizing(28, 30);
+  text-decoration: underline;
+}
+
+h3 + section {
+  margin-top: globals.pxToRem(40);
+}
+
+section {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: globals.pxToRem(100);
+    row-gap: globals.pxToRem(50);
+    @media screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

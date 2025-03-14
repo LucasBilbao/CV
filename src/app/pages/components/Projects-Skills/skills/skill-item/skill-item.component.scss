@@ -1,0 +1,19 @@
+@use "../../../../../../globals.scss" as globals;
+
+:host {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: globals.pxToRem(15);
+
+  p {
+    margin: 0;
+  }
+  span {
+    $pie_dimensions: globals.pxToRem(25);
+    display: inline-block;
+    width: $pie_dimensions;
+    height: $pie_dimensions;
+    border-radius: 50%;
+  }
+}

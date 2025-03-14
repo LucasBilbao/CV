@@ -1,0 +1,13 @@
+<section class="center">
+  <h2>Experience</h2>
+  <ul>
+    @if(!(isLoading$() | async)){ @for (experience of (experiences$() | async);
+    track $index) {
+    <li>
+      <cv-experience-item [experience]="experience" />
+    </li>
+    } } @else {
+    <cv-loader />
+    }
+  </ul>
+</section>

@@ -1,0 +1,35 @@
+<nav class="center">
+  <ul>
+    @for (navPath of NAV_PATHS; track $index) {
+    <li>
+      <a
+        data-link
+        [routerLink]="[navPath.route]"
+        routerLinkActive="active_link"
+      >
+        {{ navPath.title }}
+      </a>
+    </li>
+    }
+  </ul>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    @for (navPath of NAV_PATHS; track $index) {
+    <a
+      mat-menu-item
+      [routerLink]="[navPath.route]"
+      routerLinkActive
+      #ref="routerLinkActive"
+      [disabled]="ref.isActive"
+    >
+      {{ navPath.title }}
+    </a>
+    }
+  </mat-menu>
+</nav>

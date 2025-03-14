@@ -1,0 +1,18 @@
+@use "../../../../globals.scss" as globals;
+
+section.center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: globals.pxToRem(70);
+  row-gap: globals.pxToRem(50);
+
+  mat-divider {
+    background: white;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0 globals.pxToRem(35);
+    justify-content: center;
+  }
+}

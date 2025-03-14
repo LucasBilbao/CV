@@ -1,0 +1,28 @@
+@use "../../../../globals.scss" as globals;
+
+section.center {
+  display: flex;
+  margin-top: globals.pxToRem(70);
+  justify-content: space-between;
+  column-gap: globals.pxToRem(150);
+  row-gap: globals.pxToRem(75);
+
+  p {
+    text-indent: globals.pxToRem(50);
+    @include globals.fontSizing(24, 30);
+
+    @media screen and (max-width: 450px) {
+      text-indent: globals.pxToRem(25);
+      @include globals.fontSizing(18, 24);
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    margin-top: globals.pxToRem(0);
+    flex-direction: column;
+
+    p {
+      margin-left: 0;
+    }
+  }
+}
