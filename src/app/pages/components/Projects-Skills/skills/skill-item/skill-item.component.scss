@@ -8,6 +8,15 @@
 
   p {
     margin: 0;
+    span.mat-badge-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      $size: 15;
+      width: globals.pxToRem($size);
+      height: globals.pxToRem($size);
+      @include globals.font(6, 10);
+    }
   }
   span {
     $pie_dimensions: globals.pxToRem(25);

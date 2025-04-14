@@ -4,7 +4,11 @@
   <ul>
     @for (skill of (skills$() | async); track $index) {
     <li [matTooltip]="LEVELS[skill.level]" matTooltipPosition="above">
-      <cv-skill-item [level]="skill.level" [skill]="skill.skill" />
+      <cv-skill-item
+        [level]="skill.level"
+        [skill]="skill.skill"
+        [date]="skill.date"
+      />
     </li>
     }
   </ul>

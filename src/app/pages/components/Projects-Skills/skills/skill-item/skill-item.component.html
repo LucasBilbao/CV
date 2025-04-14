@@ -1,2 +1,9 @@
-<p>{{ skill() }}</p>
+<p
+  [matBadge]="isNew() ? 'NEW' : null"
+  matBadgeOverlap="false"
+  matBadgePosition="after"
+  matBadgeColor="warn"
+>
+  {{ skill() }}
+</p>
 <span [ngStyle]="{ 'background-image': conicGradient() }"></span>
