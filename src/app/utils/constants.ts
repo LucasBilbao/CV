@@ -1,5 +1,4 @@
-// export const DATABASE_URL = 'https://cv-backend-942y.onrender.com/api';
-export const DATABASE_URL = 'http://localhost:3000/api';
+export const DATABASE_URL = 'https://cv-backend-942y.onrender.com/api';
 
 export const LEVELS = [
   'Novice',
