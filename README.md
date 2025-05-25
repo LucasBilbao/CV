@@ -8,4 +8,4 @@ CV Web Application, a dynamic and visually engaging way to explore my profession
 - Angular Material@19.1.2
 - Typescript@5.5.4
 
-## [Deployment Link](https://luka-s-cv-6dde7.web.app/)
+## [Deployment Link](https://lucasbilbao.github.io/CV)
