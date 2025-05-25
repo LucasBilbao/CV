@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { UrlBuilder } from '../utils/urlBuilder';
 import { PATHS } from '../utils/paths.enum';
+import { ALIAS } from '../utils/alias.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,11 @@ export class BaseClientService {
     false
   );
 
-  constructor(private http: HttpClient) {}
+  protected readonly ALIAS: ALIAS;
+
+  constructor(private http: HttpClient, alias: ALIAS) {
+    this.ALIAS = alias;
+  }
 
   protected fetch<T>(
     sub: BehaviorSubject<T[]>,
@@ -21,10 +26,12 @@ export class BaseClientService {
   ): void {
     this.isLoadingObservable = true;
     const url = new UrlBuilder().setPath(path).setParameters(params).get();
-    this.http.get<T[]>(url).subscribe((data) => {
-      sub.next(data);
-      this.isLoadingObservable = false;
-    });
+    this.http
+      .get<{ [x: string]: T[] }>(url)
+      .subscribe(({ [this.ALIAS]: data }) => {
+        sub.next(data);
+        this.isLoadingObservable = false;
+      });
   }
 
   public set isLoadingObservable(value: boolean) {

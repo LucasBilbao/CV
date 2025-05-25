@@ -10,6 +10,12 @@ export class DatingPipe implements PipeTransform {
       return 'Ongoing';
     }
 
+    const date = value instanceof Date ? value : new Date(value);
+
+    if (date >= new Date()) {
+      return 'Ongoing';
+    }
+
     return new DatePipe('en').transform(value, 'MMMM, yyyy');
   }
 }

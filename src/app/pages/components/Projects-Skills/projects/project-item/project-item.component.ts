@@ -1,5 +1,5 @@
 import { Component, input, Input } from '@angular/core';
-import { Project } from '../../../../../interfaces/project.interface';
+import { MappedProject } from '../../../../../interfaces/project.interface';
 import { MatChip } from '@angular/material/chips';
 import { MatIcon } from '@angular/material/icon';
 import { TruncatableComponent } from '../../../../../shared/components/truncatable/truncatable.component';
@@ -12,5 +12,5 @@ import { TruncatePipe } from '../../../../../shared/pipes/truncate.pipe';
   imports: [MatChip, MatIcon, TruncatePipe],
 })
 export class ProjectItemComponent extends TruncatableComponent {
-  public project = input.required<Project>();
+  public project = input.required<MappedProject>();
 }

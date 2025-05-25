@@ -25,14 +25,7 @@ export class SkillsComponent implements OnInit {
   public readonly LEVELS = LEVELS;
 
   constructor(private skillService: SkillService) {
-    this.skills$.set(
-      this.skillService.skillsObservable.pipe(
-        map((data) => {
-          data.reverse();
-          return data;
-        })
-      )
-    );
+    this.skills$.set(this.skillService.skillsObservable);
     this.isLoading$.set(this.skillService.isLoadingObservable);
   }
 
