@@ -12,7 +12,7 @@ import { calcDateDiffInDaysUntilNow } from '../../../../../utils/calcDateDiffInD
 export class SkillItemComponent {
   public skill = input.required<string>();
   public level = input<number>(0);
-  public date = input<number | undefined>(undefined);
+  public createdAt = input<number | string | undefined>(undefined);
 
   public conicGradient = computed(() => {
     const deg = (this.level() + 1) * 72;
@@ -20,7 +20,7 @@ export class SkillItemComponent {
   });
 
   public isNew = computed(() => {
-    const date = this.date();
+    const date = this.createdAt();
     if (!date) {
       return false;
     }
